@@ -47,7 +47,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
     function setUpPlaceholders() {
         var placeholders = new Array<Placeholder>();
         getPlaceholders().then(function (response) {
-            placeholders = response;
+            placeholders = response.filter(x => x.status === true);
             var holder = document.getElementById("holder");
 
             if (placeholders.length === 0) {
@@ -183,6 +183,7 @@ class Placeholder {
     id: number;
     name: string;
     tag: string;
+    status: boolean;
     description: string;
     docPlaceholderType: PlaceholderType
 }

@@ -36,7 +36,7 @@ else {
     function setUpPlaceholders() {
         var placeholders = new Array();
         getPlaceholders().then(function (response) {
-            placeholders = response;
+            placeholders = response.filter(function (x) { return x.status === true; });
             var holder = document.getElementById("holder");
             if (placeholders.length === 0) {
                 holder.innerHTML += '<p style="padding: 3px; margin: 0px;>' + 'No Placeholders Found' + '</p>';
