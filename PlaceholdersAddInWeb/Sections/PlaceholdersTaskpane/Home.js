@@ -70,10 +70,12 @@ else {
                         name: x.name,
                         value: x.name
                     });
-                    var infobox = $('<i/>').attr({
+                    var infobox = $('<input/>').attr({
                         id: 'placeholder-info' + x.id,
-                        style: 'margin-right: 10px',
-                        class: 'fas fa-info-circle',
+                        style: 'background: none; border: none; margin: 0; padding: 0; cursor: pointer; margin-left: 5px; margin-right: 10px',
+                        type: 'button',
+                        name: '+',
+                        value: '+'
                     });
                     placeholder.append(button);
                     placeholder.append(infobox);
