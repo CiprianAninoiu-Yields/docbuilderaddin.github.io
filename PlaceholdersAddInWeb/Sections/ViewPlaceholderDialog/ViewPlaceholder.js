@@ -13,7 +13,7 @@
         }
     }
     Office.initialize = function (reason) {
-        placeholderTag = GetURLParameter('tag').replace(/%3E/g, " ").replace(/%3/g, " ").replace(/%20/g, " ");
+        placeholderTag = GetURLParameter('tag');
         description = GetURLParameter('description').replace(/%3E/g, " ").replace(/%3/g, " ").replace(/%20/g, " ");
         var holder = document.getElementById("holder");
         holder.innerHTML += '<h3 style="text-align: center;">' + placeholderTag + '</h3><br>';
