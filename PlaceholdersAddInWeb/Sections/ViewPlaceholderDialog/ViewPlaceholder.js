@@ -17,6 +17,8 @@
         description = GetURLParameter('description').replace(/%3/g, " ");
         placeholderTag = GetURLParameter('tag').replace(/%3E/g, " ");
         description = GetURLParameter('description').replace(/%3E/g, " ");
+        placeholderTag = GetURLParameter('tag').replace(/%20/g, " ");
+        description = GetURLParameter('description').replace(/%20/g, " ");
         var holder = document.getElementById("holder");
         holder.innerHTML += '<h3 style="text-align: center;">' + placeholderTag + '</h3>';
         holder.innerHTML += '<p style="padding: 0; margin: 0; outline: none; color: #666; text-align: center;">Tag name is ' + placeholderTag + '.</p>';

@@ -21,6 +21,8 @@
         description = GetURLParameter('description').replace(/%3/g, " ");
         placeholderTag = GetURLParameter('tag').replace(/%3E/g, " ");
         description = GetURLParameter('description').replace(/%3E/g, " ");
+        placeholderTag = GetURLParameter('tag').replace(/%20/g, " ");
+        description = GetURLParameter('description').replace(/%20/g, " ");
 
         var holder = document.getElementById("holder");
         holder.innerHTML += '<h3 style="text-align: center;">' + placeholderTag + '</h3>';
