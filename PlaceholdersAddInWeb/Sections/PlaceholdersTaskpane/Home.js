@@ -63,13 +63,13 @@ else {
                     var placeholder = $('<div/>').attr({
                         style: 'display: flex; justify-content: space-between; padding: 3px; margin: 0px; border-style: groove; border-color:#666; border-width: 1px 2px',
                     });
-                    var button = $('<input/>').attr({
+                    /*var button = $('<input/>').attr({
                         id: 'placeholder' + x.id,
                         style: 'background: none; border: none; margin: 0; padding: 0; cursor: pointer; margin-left: 5px',
                         type: 'button',
                         name: x.name,
                         value: x.name
-                    });
+                    });*/
                     var infobox = $('<input/>').attr({
                         id: 'placeholder-info' + x.id,
                         style: 'background: none; border: none; margin: 0; padding: 0; cursor: pointer; margin-left: 5px; margin-right: 10px',
@@ -77,15 +77,15 @@ else {
                         name: '+',
                         value: '+'
                     });
-                    placeholder.append(button);
+                    /*placeholder.append(button);*/
                     placeholder.append(infobox);
                     $("#holder").append(placeholder);
                 });
             }
             placeholders.forEach(function (x) {
-                $("#placeholder" + x.id).click(function () {
-                    insertPlaceholder(x.tag);
-                });
+                /* $("#placeholder" + x.id).click(function () {
+                     insertPlaceholder(x.tag);
+                 });*/
                 $("#placeholder-info" + x.id).click(function () {
                     viewPlaceholderInfo(x.tag, x.description);
                 });
