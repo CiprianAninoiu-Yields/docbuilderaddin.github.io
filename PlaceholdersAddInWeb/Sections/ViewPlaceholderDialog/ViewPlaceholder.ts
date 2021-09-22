@@ -22,6 +22,7 @@
 
         var holder = document.getElementById("holder");
         holder.innerHTML += '<h3 style="text-align: center;">' + placeholderTag + '</h3>';
+        holder.innerHTML += '<hr>';
         holder.innerHTML += '<p style="text-align: center;">Tag name is ' + placeholderTag + '.</p>';
         holder.innerHTML += '<p style="text-align: center;">' + description + '</p>';
     };
