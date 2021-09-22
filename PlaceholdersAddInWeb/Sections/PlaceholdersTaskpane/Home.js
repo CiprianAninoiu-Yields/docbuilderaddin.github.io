@@ -49,7 +49,7 @@ else {
                     uniquePlTypes.push(x);
             });
             for (var j = 0; j < uniquePlTypes.length; j++) {
-                holder.innerHTML += '<p style="background-color:#377dde; padding: 3px; margin: 0px; border-style: groove; border-width: 2px; font-weight: bold">' + uniquePlTypes[j].name + '</p>';
+                holder.innerHTML += '<p style="background-color:#377dde; padding: 3px; margin: 0px; border-style: groove; border-width: 2px; font-weight: bold; color:white; ">' + uniquePlTypes[j].name + '</p>';
                 var typeplaceholders = placeholders.filter(function (x) { return x.docPlaceholderType.id === uniquePlTypes[j].id; });
                 typeplaceholders.forEach(function (x) {
                     var placeholder = $('<div/>').attr({
