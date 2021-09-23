@@ -81,6 +81,16 @@
             text-align: center;
         }
 
+        .formcontainer {
+            text-align: center;
+            margin: 24px 50px 12px;
+        }
+
+        .container {
+            padding: 16px 0;
+            text-align: left;
+        }
+
         button {
             width: 100%;
             padding: 10px 0;
@@ -97,18 +107,18 @@
             }
     </style>
 </head>
-<body class="ms-Fabric" dir="ltr">
-    <div id="SettingsForm">
+<body class="ms-Fabric" dir="ltr" style="width: 100%!important">
+    <div class="formcontainer" style="width: 100%!important">
         <h3>Documentation Builder Settings</h3>
-        <form action="/">
-            <label for="url" style="font-weight: bold">URL:</label><br>
-            <input type="text" name="url" id="url" placeholder=".../DocBuilder.Api/api/placeholder/all" style="color: black" required />
-            <label for="token" style="font-weight: bold">Token:</label><br>
+        <div class="container" id="SettingsForm" style="width: 100%!important">
+            <label for="url" style="font-weight: bold">URL:</label>
+            <input type="text" name="url" id="url" placeholder=".../DocBuilder.Api/api/placeholder/all" required style="color: black; margin-bottom: 10px" />
+            <label for="token" style="font-weight: bold">Token:</label>
             <input type="text" name="token" id="token" placeholder="-" required style="color: black" />
-            <div class="btn-block">
-                <button type="submit" href="/">Submit</button>
-            </div>
-        </form>
+        </div>
+        <div class="btn-block">
+            <button type="submit" href="/">Submit</button>
+        </div>
     </div>
 </body>
 </html>
