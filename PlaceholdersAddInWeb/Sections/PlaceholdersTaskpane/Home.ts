@@ -36,7 +36,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
     function viewPlaceholderInfo(placeholderTag: string, description: string) {
-        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + placeholderTag + '&description=' + description, { height: 40, width: 40 },
+        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + placeholderTag + '&description=' + description, { height: 35, width: 35 },
             function (asyncResult) {
                 dialog = asyncResult.value;
             }
@@ -151,7 +151,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
 function openSettings(event) {
-    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 40, width: 40 },
+    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 35, width: 35 },
         function (asyncResult) {
             dialog = asyncResult.value;
             dialog.addEventHandler(Office.EventType.DialogMessageReceived, processSettings);
