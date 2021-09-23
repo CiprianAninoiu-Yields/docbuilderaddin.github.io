@@ -17,13 +17,13 @@
 
 
     Office.initialize = function (reason) {
-        placeholderTag = GetURLParameter('tag').replace(/%3C/g, " ").replace(/%3E/g, " ").replace(/%20/g, " ");
-        description = GetURLParameter('description').replace(/%3C/g, " ").replace(/%3E/g, " ").replace(/%20/g, " ");
+        placeholderTag = GetURLParameter('tag').replace(/%3C/g, "<").replace(/%3E/g, ">").replace(/%20/g, " ");
+        description = GetURLParameter('description').replace(/%3C/g, "<").replace(/%3E/g, ">").replace(/%20/g, " ");
 
         var holder = document.getElementById("holder");
         holder.innerHTML += '<h3 style="text-align: center;">' + placeholderTag + '</h3>';
         holder.innerHTML += '<hr>';
-        holder.innerHTML += '<p style="text-align: center;">Tag name is ' + placeholderTag + '.</p>';
-        holder.innerHTML += '<p style="text-align: center;">' + description + '</p>';
+        holder.innerHTML += '<p style="text-align: left;">Tag name is ' + placeholderTag + '.</p>';
+        holder.innerHTML += '<p style="text-align: left;">' + description + '</p>';
     };
 })();
