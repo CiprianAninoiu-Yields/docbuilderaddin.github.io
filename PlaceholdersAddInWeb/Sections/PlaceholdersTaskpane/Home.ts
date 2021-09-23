@@ -36,7 +36,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
     function viewPlaceholderInfo(placeholderTag: string, description: string) {
-        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + placeholderTag + '&description=' + description, { height: 20, width: 20 },
+        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + placeholderTag + '&description=' + description, { height: 40, width: 40 },
             function (asyncResult) {
                 dialog = asyncResult.value;
             }
@@ -82,8 +82,8 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
                         id: 'placeholder-info' + x.id,
                         style: 'background: none; border: none; margin: 0; padding: 0; cursor: pointer; margin-left: 5px; margin-right: 10px',
                         type: 'button',
-                        name: '+',
-                        value: '+'
+                        name: '?',
+                        value: '?'
                     });
 
                     placeholder.append(button);
@@ -151,7 +151,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
 function openSettings(event) {
-    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 30, width: 20 },
+    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 40, width: 40 },
         function (asyncResult) {
             dialog = asyncResult.value;
             dialog.addEventHandler(Office.EventType.DialogMessageReceived, processSettings);
