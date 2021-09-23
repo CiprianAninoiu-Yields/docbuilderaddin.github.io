@@ -36,7 +36,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
     function viewPlaceholderInfo(placeholderTag: string, description: string) {
-        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + placeholderTag + '&description=' + description, { height: 20, width: 20 },
+        Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/ViewPlaceholderDialog/ViewPlaceholder.html?tag=' + encodeURIComponent(placeholderTag) + '&description=' + encodeURIComponent(description), { height: 20, width: 20 },
             function (asyncResult) {
                 dialog = asyncResult.value;
             }
