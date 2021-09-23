@@ -151,7 +151,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
 function openSettings(event) {
-    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 50, width: 50 },
+    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 45, width: 45 },
         function (asyncResult) {
             dialog = asyncResult.value;
             dialog.addEventHandler(Office.EventType.DialogMessageReceived, processSettings);
