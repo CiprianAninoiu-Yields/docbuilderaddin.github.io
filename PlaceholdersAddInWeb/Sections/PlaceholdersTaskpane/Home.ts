@@ -29,7 +29,6 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
             var element = document.querySelector('.MessageBanner');
             messageBanner = new components.MessageBanner(element);
             messageBanner.hideBanner();
-            loadSampleData();
             setUpPlaceholders();
         });
 
@@ -129,20 +128,6 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
                     range.insertText(placeholder, Word.InsertLocation.end);
                 })
                 .then(context.sync);
-        })
-            .catch(errorHandler);
-    }
-
-    function loadSampleData() {
-        Word.run(function (context) {
-            var body = context.document.body;
-
-            body.clear();
-            body.insertText(
-                "This is a sample text inserted in the document",
-                Word.InsertLocation.end);
-
-            return context.sync();
         })
             .catch(errorHandler);
     }

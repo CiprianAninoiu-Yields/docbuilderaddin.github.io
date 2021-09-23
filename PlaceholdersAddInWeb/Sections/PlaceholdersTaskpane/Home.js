@@ -24,7 +24,6 @@ else {
             var element = document.querySelector('.MessageBanner');
             messageBanner = new components.MessageBanner(element);
             messageBanner.hideBanner();
-            loadSampleData();
             setUpPlaceholders();
         });
     };
@@ -106,15 +105,6 @@ else {
                 range.insertText(placeholder, Word.InsertLocation.end);
             })
                 .then(context.sync);
-        })
-            .catch(errorHandler);
-    }
-    function loadSampleData() {
-        Word.run(function (context) {
-            var body = context.document.body;
-            body.clear();
-            body.insertText("This is a sample text inserted in the document", Word.InsertLocation.end);
-            return context.sync();
         })
             .catch(errorHandler);
     }
