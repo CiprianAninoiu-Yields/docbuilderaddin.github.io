@@ -109,16 +109,18 @@
 </head>
 <body class="ms-Fabric" dir="ltr" style="width: 100%!important">
     <div class="formcontainer" style="width: 100%!important">
-        <div class="container" id="SettingsForm" style="width: 100%!important">
-            <h3>Documentation Builder Settings</h3>
-            <label for="url" style="font-weight: bold">URL:</label>
-            <input type="text" name="url" id="url" placeholder="https://YourChironEnterpriseURL:8081/CE.DocBuilder.Api/api/placeholder/all" required style="color: black; margin-bottom: 10px" />
-            <label for="token" style="font-weight: bold">Token:</label>
-            <input type="text" name="token" id="token" placeholder="-" required style="color: black" />
-        </div>
-        <div class="btn-block">
-            <button type="submit" href="/">Submit</button>
-        </div>
+        <form action="/">
+            <div class="container" id="SettingsForm" style="width: 100%!important">
+                <h3>Documentation Builder Settings</h3>
+                <label for="url" style="font-weight: bold">URL:</label>
+                <input type="text" name="url" id="url" placeholder="https://YourChironEnterpriseURL:8081/CE.DocBuilder.Api/api/placeholder/all" required style="color: black; margin-bottom: 10px" />
+                <label for="token" style="font-weight: bold">Token:</label>
+                <input type="text" name="token" id="token" placeholder="-" required style="color: black" />
+            </div>
+            <div class="btn-block">
+                <button type="submit" href="/">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
