@@ -161,7 +161,7 @@ function openSettings(event) {
 }
 
 function openDetails(event) {
-    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/SettingsDialog/Settings.html', { height: 45, width: 45 },
+    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/DetailsDialog/Details.html', { height: 45, width: 45 },
         function (asyncResult) {
             dialog = asyncResult.value;
             dialog.addEventHandler(Office.EventType.DialogMessageReceived, processSettings);
