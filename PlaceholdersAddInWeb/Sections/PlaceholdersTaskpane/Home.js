@@ -130,7 +130,7 @@ function openSettings(event) {
     event.completed();
 }
 function openDetails(event) {
-    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/DetailsDialog/Details.html', { height: 45, width: 45 }, function (asyncResult) {
+    Office.context.ui.displayDialogAsync('https://cipriananinoiu-yields.github.io/docbuilderaddin.github.io/PlaceholdersAddInWeb/Sections/DetailsDialog/Details.html', { height: 30, width: 30 }, function (asyncResult) {
         dialog = asyncResult.value;
         dialog.addEventHandler(Office.EventType.DialogMessageReceived, processSettings);
     });
