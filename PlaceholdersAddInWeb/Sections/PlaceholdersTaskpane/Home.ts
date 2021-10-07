@@ -5,7 +5,7 @@ var token;
 if (localStorage.getItem('url') || localStorage.getItem('url') === '') {
     url = localStorage.getItem('url');
 } else {
-    localStorage.setItem('url', 'https://localhost/DocBuilder.Api/api/placeholder/all');
+    localStorage.setItem('url', `https://localhost/DocBuilder.Api/api/placeholders`);
     url = localStorage.getItem('url');
 }
 
@@ -105,7 +105,7 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
     function getPlaceholders(): Promise<Placeholder[]> {
-        return fetch(url + '/' + token)
+        return fetch(url + '/' + token + '')
             .then(res => {
                 if (!res.ok) {  
                     throw new Error("N")
