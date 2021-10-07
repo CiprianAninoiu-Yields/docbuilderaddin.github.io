@@ -6,7 +6,7 @@
     if (localStorage.getItem('url') || localStorage.getItem('url') === '') {
         url = localStorage.getItem('url');
     } else {
-        localStorage.setItem('url', `https://localhost/DocBuilder.Api/api/placeholders`);
+        localStorage.setItem('url', `https://localhost/CE.ApiGateway/api/DocBuilder/placeholders`);
         url = localStorage.getItem('url');
     }
 
