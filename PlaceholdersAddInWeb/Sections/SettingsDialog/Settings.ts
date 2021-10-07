@@ -13,7 +13,7 @@
     if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
         token = localStorage.getItem('token');
     } else {
-        localStorage.setItem('token', '');
+        localStorage.setItem('token', '1234');
         token = localStorage.getItem('token');
     }
 

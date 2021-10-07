@@ -12,7 +12,7 @@ if (localStorage.getItem('url') || localStorage.getItem('url') === '') {
 if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
     token = localStorage.getItem('token');
 } else {
-    localStorage.setItem('token', '');
+    localStorage.setItem('token', '1234');
     token = localStorage.getItem('token');
 }
 
@@ -105,9 +105,9 @@ if (localStorage.getItem('token') || localStorage.getItem('token') === '') {
 
 
     function getPlaceholders(): Promise<Placeholder[]> {
-        return fetch(url)
+        return fetch(url + '/' + token)
             .then(res => {
-                if (!res.ok) {
+                if (!res.ok) {  
                     throw new Error("N")
                 } else {
                     return res.json() as unknown as Placeholder[]
